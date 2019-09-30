@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    -->
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>5CFS</title>
 </head>
 <body>
-    <h1>5C For-Sale/For-Free</h1>
-    <p>Clayton north can suck my hairy balls</p>
+    <aside class="menu">
+        <figure>
+            <div id="avatar"></div>
+            <figcaption>Student X</figcaption>
+            <br>
+        </figure>
+    <img src="images/menu.svg">
+        <nav class="side-nav">
+            <ul class="side-nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Test</a></li>
+            </ul>
+        </nav>
+   </aside> 
+   <main>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><strong>5CFS</strong></a>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Clayton</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Is</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">a</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#">Fag</a>
+                    </li>
+                    <li class="nav-item">
+                        <form class="form-inline navbar-search">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">This looks like shit</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <p style="padding: 15px;">
+            Need to figure out bootstrap before apply more styles, but most of the elements should
+            be configured for when I get it working. In the interim, we need to figure out how we're
+            gonna set up the templated html for the actual marketplace aspect of the website. 
+            Also weird spacing of topnav elements that i need to figure out
+        </p>
+   </main>
+   <script>
+
+            (function () {
+                var menu = document.querySelector('ul'),
+                    menulink = document.querySelector('img');
+
+                menulink.addEventListener('click', function(e) {
+                    menu.classList.toggle('active');
+                    e.preventDefault();
+                });
+            })();
+
+   </script>
 </body>
 </html>

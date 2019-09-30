@@ -1,0 +1,232 @@
+/*
+* css for index.html
+*/
+
+/*
+Assumes screen size of >768px
+Will fully implement later
+*/
+
+body, html {
+    height: calc(100%);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+/*
+body {
+        Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+0,a9a9a9+71 
+    background: #1e5799; Old browsers
+    background: -moz-linear-gradient(45deg, #1e5799 0%, #2989d8 0%, #a9a9a9 71%); FF3.6-15 
+    background: -webkit-linear-gradient(45deg, #1e5799 0%,#2989d8 0%,#a9a9a9 71%); Chrome10-25,Safari5.1-6
+    background: linear-gradient(45deg, #1e5799 0%,#2989d8 0%,#a9a9a9 71%); W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#a9a9a9',GradientType=1 ); IE6-9 fallback on horizontal gradient 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+*/
+
+aside {
+    color: white;
+    display: grid;
+    grid-template-columns: auto 40px;
+    padding: 2em;
+}
+
+img {
+    width: 40px;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+figcaption.sub {
+    display: none;
+}
+
+nav {
+    background-color: white;
+}
+
+.active {
+    position: absolute;
+    display: block;
+    background: white;
+    width: 30%;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    display: block;
+    padding: 1.5em 3em;
+    background-color: rgba(255, 255, 255, 0.35);
+    color: black;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: lightgray;
+}
+
+main {
+    background: white;
+    overflow: scroll;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+/* For screen size >768px */
+@media only screen and (min-width: 768px) {
+
+    /* Entire website */
+    body {
+        display: grid;
+        grid-template-columns: 20% auto;
+    }
+
+    /* 3 line thingy for >768px (mobile version) */
+    img {
+        display: none;
+    }
+
+    /* Side navagation -- want to make a dropdown */
+    aside {
+        background: #DCE1F6;
+        grid-template-columns: auto;
+        grid-template-rows: 20% auto;
+        padding: 0;
+    }
+
+    /* Part where things being sold are displayed */
+    main {
+        background-size: 70%;
+    }
+
+    /* Profile picture */
+    #avatar {
+        border-radius: 50%;
+        background: white;
+        width: 50px;
+        height: 50px;
+        margin: 2em auto 1em auto;
+    }
+
+    /* ie, username */
+    figcaption {
+        text-align: center;
+        color: black;
+    }
+
+    /* likely not useful */
+    figcaption.sub {
+        display: hidden;
+        font-size: 1em;
+        color: grey;
+        padding: 0.2em;
+    }
+
+    /* Side navagation list */
+    .side-nav-list {
+        display: block;
+        margin-top: 2em;
+        position: relative !important;
+        background: none !important;
+        width: 100% !important;
+    }
+
+    /* Hover styles */
+    .side-nav-list li a:hover {
+        background-color: white;
+        transition: 0.3s;
+    }
+
+
+    /* Nav element on side nav */
+    .side-nav {
+        background: none;
+    }
+
+    /* Top navagation */
+    .navbar {
+        /*background: #DCE1F6;*/
+        background-color: white;
+        display: flex;
+        border-bottom: 1px solid #e1e1e1;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(225, 225, 225);
+    }
+   
+    /* Our logo */
+    .navbar-brand {
+        display: inline-block;
+        padding: 16px 48px;
+        font-size: 1.25rem;
+        border-right: 1px solid black;
+        line-height: inherit;
+        white-space: nowrap;
+        text-decoration: none;
+        color: black;
+    }
+
+    /* List for nav elements */
+    .navbar-nav {
+        display: inline;
+        text-decoration: none;
+    }
+    
+    /* Individual items */
+    .nav-item {
+        display: inline-block;
+        padding: 21px 48px;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    /* Nav item anchors */
+    .nav-item a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .navbar-search {
+
+    }
+
+    .nav-item:hover {
+        background-color: #DCE1F6; 
+
+    }
+
+}
